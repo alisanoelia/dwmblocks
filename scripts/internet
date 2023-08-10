@@ -1,0 +1,13 @@
+#!/bin/bash
+
+Internet() {
+  if ping -q -c 1 -W 2 8.8.8.8 >/dev/null; then
+    echo "󰖩  Connected"
+  else
+    echo "Disconnected"
+  fi
+}
+
+while true; do
+  echo "$(Internet)"
+done

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+Batery() {
+    s=$(cat /sys/class/power_supply/BATT/status)
+    p=$(cat /sys/class/power_supply/BATT/capacity)
+    echo "   $p% $s"
+}
+echo "$(Batery)"
